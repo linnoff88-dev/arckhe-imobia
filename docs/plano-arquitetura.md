@@ -1,10 +1,10 @@
-# imobia — Plano de arquitetura (proposta em discussão)
+# imobia — Plano de arquitetura (proposta em discussêo)
 
-Data: 2026-10-13 · Status: **proposta — aguardando decisão A/B/C do Telegram antes do spec final**
+Data: 2026-10-13 · Status: **proposta — aguardando decisêo A/B/C do Telegram antes do spec final**
 
 ## Objetivo
 
-Sistema próprio, simples e quase todo automático para uma imobiliária de venda e locação com
+Sistema próprio, simples e quase todo automático para uma imobiliária de venda e locaçêo com
 5 corretores. O cliente fala pelo WhatsApp; uma IA responde 24h, qualifica, mostra imóveis reais e
 agenda visita; a equipe acompanha e assume conversas pelo Telegram; o dono vê tudo num painel.
 Sem formulários.
@@ -27,20 +27,20 @@ Tudo em Docker numa VPS.
 ## Componentes
 
 1. **Receptor WhatsApp** — webhook `messages.upsert` da Evolution; cria/acha o contato por telefone;
-   junta mensagens picadas (espera o cliente terminar de digitar); áudio → transcrição local (Whisper).
-2. **Agente de IA** — conversa, qualifica (compra/aluguel, tipo, região, faixa de preço, quartos,
+   junta mensagens picadas (espera o cliente terminar de digitar); áudio → transcriçêo local (Whisper).
+2. **Agente de IA** — conversa, qualifica (compra/aluguel, tipo, regiêo, faixa de preço, quartos,
    prazo), usa ferramentas: `buscar_imoveis`, `enviar_fotos`, `propor_visita`, `chamar_corretor`.
-   Nunca cita imóvel que não veio do banco.
+   Nunca cita imóvel que nêo veio do banco.
 3. **Handoff** — estados da conversa: `ia → aguardando corretor → corretor → encerrada`.
-   Passa para humano em: pedido de pessoa, negociação/financiamento, reclamação, visita marcada,
+   Passa para humano em: pedido de pessoa, negociaçêo/financiamento, reclamaçêo, visita marcada,
    3 mal-entendidos. Envia resumo pronto ao corretor.
 4. **Bot do Telegram** — aviso de lead novo com resumo; corretor responde e a mensagem sai no
    WhatsApp; comandos curtos (`/assumir`, `/devolver`, `/imovel`, `/agenda`). Cadastro de imóvel:
-   fotos + áudio/texto livre → IA extrai campos → botão "confirmar".
+   fotos + áudio/texto livre → IA extrai campos → botêo "confirmar".
 5. **Match automático** — necessidade do cliente (faixas min/máx) × imóveis. Imóvel novo → avisa
    corretor dos leads antigos compatíveis.
 6. **Agenda de tarefas** — lembrete de visita, follow-up de lead parado (limite, horário comercial,
-   para no "não quero").
+   para no "nêo quero").
 7. **Painel** — funil, conversas, imóveis, visitas, números por corretor, custo da IA. Login simples.
    Sem telas de cadastro.
 
@@ -55,24 +55,24 @@ Tudo em Docker numa VPS.
 - `match` — lead × imóvel, status (sugerido, enviado, descartado, interessado).
 - `visita` — data, status, lembrete enviado, retorno.
 - `conversa` / `mensagem` — remetente (cliente, ia, corretor), estado, tópico do Telegram.
-- `tarefa` — ação agendada (`run_at`).
+- `tarefa` — açêo agendada (`run_at`).
 - `uso_ia` — tokens e custo por resposta.
 
-## Decisão em aberto — Telegram
+## Decisêo em aberto — Telegram
 
 - **A) Grupo com um tópico por cliente** (recomendado): tudo espelhado, corretor responde no tópico,
   dono vê tudo, troca de corretor trivial. Os 5 veem todos os leads.
 - **B) Privado por corretor**: rodízio, cada um só vê os seus; responder exige indicar o cliente.
-- **C) Misto**: grupo para supervisão + privado por corretor; o dobro de peças.
+- **C) Misto**: grupo para supervisêo + privado por corretor; o dobro de peças.
 
 ## Riscos e cuidados
 
-- Evolution é não oficial → chip dedicado, só responder quem chamou, ritmo humano, opt-out,
-  caminho de migração para a API oficial se necessário. Fixar tag Docker (`evoapicloud/evolution-api`).
+- Evolution é nêo oficial → chip dedicado, só responder quem chamou, ritmo humano, opt-out,
+  caminho de migraçêo para a API oficial se necessário. Fixar tag Docker (`evoapicloud/evolution-api`).
 - Áudio de iPhone com bug em algumas versões da Evolution → fallback pedindo texto.
 - Custo de LLM → log por resposta e limite mensal.
-- LGPD → aviso de finalidade, "sair", dados mínimos, transcrição local, prazo de retenção.
-- Nenhuma chamada de API de IA no desenvolvimento sem autorização; testes com respostas simuladas.
+- LGPD → aviso de finalidade, "sair", dados mínimos, transcriçêo local, prazo de retençêo.
+- Nenhuma chamada de API de IA no desenvolvimento sem autorizaçêo; testes com respostas simuladas.
 
 ## Fora do escopo da v1
 
@@ -82,5 +82,5 @@ construtor de fluxos, várias imobiliárias no mesmo sistema.
 ## Próximos passos
 
 1. Decidir A/B/C.
-2. Spec final (`docs/superpowers/specs/`), revisão e aprovação.
-3. Plano de implementação em fases.
+2. Spec final (`docs/superpowers/specs/`), revisêo e aprovaçêo.
+3. Plano de implementaçêo em fases.
