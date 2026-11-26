@@ -1,6 +1,6 @@
 # imobia — real estate on autopilot
 
-[![imobia](guia/assets/banner-en.jpg)](https://inematds.github.io/imobia/guia/en/)
+[![imobia](guia/assets/banner-en.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/en/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -12,7 +12,7 @@ imobia is the plan for an in-house customer service system for a real estate age
 
 ## 📖 Project page
 
-Landing page with the plan: **https://inematds.github.io/imobia/guia/en/**
+Landing page with the plan: **https://linnoff88-dev.github.io/arckhe-/guia/en/**
 
 ## Documents (in Portuguese)
 
@@ -33,4 +33,4 @@ Client (WhatsApp) → Evolution API → imobia app (AI + matching + scheduler) �
 How the team uses Telegram: **A)** one topic per client in a group (recommended), **B)** private chat per agent, **C)** mixed.
 
 ---
-[INEMA.CLUB](https://inema.club)
+[ARCKHÉ AI](https://ARCKHÉ AI)

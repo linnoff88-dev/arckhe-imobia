@@ -1,6 +1,6 @@
 # imobia — inmobiliaria en automático
 
-[![imobia](guia/assets/banner-es.jpg)](https://inematds.github.io/imobia/guia/es/)
+[![imobia](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/es/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -12,7 +12,7 @@ imobia es el plan de un sistema propio de atención para una inmobiliaria de ven
 
 ## 📖 Página del proyecto
 
-Landing con el plan: **https://inematds.github.io/imobia/guia/es/**
+Landing con el plan: **https://linnoff88-dev.github.io/arckhe-/guia/es/**
 
 ## Documentos (en portugués)
 
@@ -33,4 +33,4 @@ Cliente (WhatsApp) → Evolution API → App imobia (IA + match + agenda) → Po
 Cómo usa el equipo Telegram: **A)** un tema por cliente en un grupo (recomendado), **B)** privado por corredor, **C)** mixto.
 
 ---
-[INEMA.CLUB](https://inema.club)
+[ARCKHÉ AI](https://ARCKHÉ AI)

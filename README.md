@@ -6,7 +6,7 @@
 </div>
 
 
-[![imobia](guia/assets/banner.jpg)](https://inematds.github.io/imobia/guia/)
+[![imobia](guia/assets/banner.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/)
 
 **ê°Å¸â¡Â§ê°Å¸â¡Â· [PortuguêÂªs](README.md) êÂ· ê°Å¸â¡Âºê°Å¸â¡Â¸ [English](README.en.md) êÂ· ê°Å¸â¡Âªê°Å¸â¡Â¸ [EspaêÂ±ol](README.es.md)**
 
@@ -18,7 +18,7 @@ O imobia êÂ© o plano de um sistema prêÂ³prio de atendimento para uma i
 
 ## ê°Å¸ââ PêÂ¡gina do projeto
 
-Landing com o plano: **https://inematds.github.io/imobia/guia/**
+Landing com o plano: **https://linnoff88-dev.github.io/arckhe-/guia/**
 
 ## Documentos
 
@@ -39,7 +39,7 @@ Cliente (WhatsApp) ê¢â â Evolution API ê¢â â App imobia (I
 Como a equipe usa o Telegram: **A)** um têÂ³pico por cliente num grupo (recomendado), **B)** privado por corretor, **C)** misto.
 
 ---
-[INEMA.CLUB](https://inema.club)
+[ARCKHÉ AI](https://ARCKHÉ AI)
 
 ---
 
